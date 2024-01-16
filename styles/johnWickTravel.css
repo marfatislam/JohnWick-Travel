@@ -1,18 +1,50 @@
-/* Import font-family */
+/* ----------Import font-family---------- */
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;800&display=swap");
 
 :root {
   --primary-color: #ff5400;
 }
-
 body {
-  max-width: 1170px;
   height: 100vh;
-  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   font-family: Mulish;
 }
+main,
+header {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* ----------Navbar Section Styles---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menubar ul {
+  display: flex;
+  column-gap: 44px;
+}
+.menubar ul li {
+  list-style: none;
+}
+.menubar ul li a {
+  text-decoration: none;
+  color: var(--Dark-02, #424247);
+  text-align: center;
+  font-family: Mulish;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.mobile-icon {
+  display: none;
+}
+
+/* ----------Banner Section Styles---------- */
+
 .banner {
   background: linear-gradient(
       180deg,
@@ -46,9 +78,11 @@ body {
 }
 .banner .input-field {
   display: flex;
+  justify-content: center;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.3);
   padding: 16px;
+  height: 10%;
   gap: 24px;
 }
 .banner .input-field input {
@@ -89,7 +123,9 @@ body {
   padding-left: 30px;
   margin-top: -2px;
 }
-/* Popular Tours section styles */
+
+/* ----------Popular Tours section styles---------- */
+
 .tour-section {
   display: flex;
   justify-content: center;
@@ -132,7 +168,7 @@ body {
   width: 100%;
 }
 
-/* Destination styles */
+/* ----------Destination styles---------- */
 
 .destination-content {
   text-align: center;
@@ -163,6 +199,7 @@ body {
 .destination-images .image-row1 .image1 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
@@ -171,6 +208,7 @@ body {
 .destination-images .image-row1 .image2 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
@@ -185,6 +223,7 @@ body {
 .destination-images .image-row2 .image3 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
@@ -193,6 +232,7 @@ body {
 .destination-images .image-row2 .image4 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
@@ -201,12 +241,12 @@ body {
 .destination-images .image-row2 .image5 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
   left: 83%;
 }
-
 .destination-images .image-row3 {
   display: flex;
   column-gap: 24px;
@@ -216,6 +256,7 @@ body {
 .destination-images .image-row3 .image6 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
@@ -224,12 +265,15 @@ body {
 .destination-images .image-row3 .image7 {
   position: absolute;
   color: #fff;
+  border-radius: 16px;
   font-size: 28px;
   font-weight: 800;
   top: 40%;
   left: 65%;
 }
-/* Choose Card styles */
+
+/* ----------Choose Card styles---------- */
+
 .choose-section h1 {
   color: #131318;
   text-align: center;
@@ -293,8 +337,8 @@ body {
   line-height: 26px;
 }
 .card3 {
-  margin: 24px auto 50px;
-  width: 50%;
+  margin: 16px auto 50px;
+  width: 44%;
   padding: 32px;
   border-radius: 16px;
   border: 1px solid rgba(233, 68, 68, 0.2);
@@ -314,7 +358,9 @@ body {
   font-weight: 400;
   line-height: 26px;
 }
-/* Newsletter styles */
+
+/* ----------Newsletter styles---------- */
+
 .newsletter-section {
   display: flex;
   justify-content: center;
@@ -339,7 +385,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 162.5% */
+  line-height: 26px;
 }
 .content > input,
 button {
@@ -396,14 +442,24 @@ button {
   font-weight: 800;
   line-height: 0;
 }
-/* footer styles */
+
+/* ----------Footer styles---------- */
+
 .footer-section {
+  width: 1440px;
+  margin: 0 auto;
   text-align: center;
+  background: rgba(19, 19, 24, 0.05);
 }
 .footer-name {
   display: flex;
   justify-content: center;
+  align-items: center;
   column-gap: 16px;
+}
+.footer-name img {
+  width: 40px;
+  height: 46.673px;
 }
 .footer-name > h1 {
   color: #131318;
@@ -435,7 +491,7 @@ span {
   margin-bottom: 50px;
 }
 .line {
-  width: 1170px;
+  width: 1440px;
   height: 1px;
   background: rgba(19, 19, 24, 0.1);
   margin-bottom: 50px;
@@ -445,23 +501,58 @@ span {
   margin-bottom: 50px;
   padding-bottom: 50px;
 }
-/* Responsive media quires styles */
+
+/* ----------Responsive media quires styles---------- */
 
 @media screen and (max-width: 600px) {
-  /* banner section responsive */
+  /* ----------Menubar section responsive---------- */
+
+  .footer-name img {
+    width: 28.724px;
+    height: 33.516px;
+  }
+  .footer-name {
+    margin-left: 20px;
+    align-items: center;
+  }
+  .footer-name h1 {
+    font-size: 21.543px;
+  }
+  .footer-name span {
+    font-size: 21.543px;
+  }
+  .menubar {
+    display: none;
+  }
+  .mobile-icon {
+    display: block;
+    margin-right: 20px;
+  }
+  .mobile-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* ----------banner section responsive---------- */
+
   .banner {
     background-position: center;
-    width: 90%;
+    width: 93%;
     margin: 20px;
   }
   .banner > h1 {
     font-size: 22px;
+    padding-top: 20px;
   }
   .banner > p {
+    font-size: 14px;
     width: 404px;
+    line-height: 21px;
+    font-weight: 400;
   }
   .banner .input-field {
     flex-direction: column;
+    height: 66%;
     width: 60%;
   }
   .banner .input-field input {
@@ -473,9 +564,11 @@ span {
   .banner .input-field svg {
     position: relative;
   }
-  /* Tours section responsive */
+
+  /* ----------Tours section responsive---------- */
+
   .tour-section {
-    margin-left: 30px;
+    margin-left: 20px;
     flex-direction: column;
     row-gap: 20px;
   }
@@ -483,22 +576,24 @@ span {
     font-size: 20px;
   }
   .tour-section p {
-    width: 80%;
+    width: 95%;
   }
   .tour-section li {
-    width: 80%;
+    width: 95%;
   }
   .tour-image img {
-    width: 90%;
+    width: 96%;
   }
-  /* destination section responsive */
+
+  /* ----------Destination section responsive---------- */
+
   .destination-content h1 {
     font-size: 20px;
   }
   .destination-images .image-row1 {
-    width: 90%;
+    width: 93%;
     flex-direction: column;
-    margin-left: 24px;
+    margin-left: 20px;
     row-gap: 24px;
   }
   .destination-images .image-row1 .image1 {
@@ -510,9 +605,9 @@ span {
     left: 40%;
   }
   .destination-images .image-row2 {
-    width: 90%;
+    width: 93%;
     flex-direction: column;
-    margin-left: 24px;
+    margin-left: 20px;
     row-gap: 24px;
   }
   .destination-images .image-row2 .image3 {
@@ -528,9 +623,9 @@ span {
     left: 37%;
   }
   .destination-images .image-row3 {
-    width: 90%;
+    width: 93%;
     flex-direction: column;
-    margin-left: 24px;
+    margin-left: 20px;
     row-gap: 24px;
   }
   .destination-images .image-row3 .image6 {
@@ -541,7 +636,9 @@ span {
     top: 75%;
     left: 35%;
   }
-  /* Choose & Card section responsive */
+
+  /*----------Choose & Card section responsive----------*/
+
   .choose-section h1 {
     font-size: 20px;
   }
@@ -550,13 +647,12 @@ span {
     margin-bottom: 20px;
   }
   .cards {
-    width: 90%;
+    width: 93%;
     flex-direction: column;
+    margin-left: 20px;
     row-gap: 16px;
   }
-  .cards .card1 {
-    margin-left: 20px;
-  }
+
   .cards .card1 .card2 h3 {
     font-size: 20px;
   }
@@ -564,34 +660,32 @@ span {
     font-size: 14px;
     width: 271px;
   }
-  .cards .card2 {
-    margin-left: 20px;
-  }
   .card3 {
-    width: 30%;
+    width: 82%;
     margin-left: 20px;
-    width: 85%;
   }
 
-  /* newsletter section responsive */
+  /* ----------newsletter section responsive---------- */
+
   .newsletter-section {
     flex-direction: column;
     row-gap: 16px;
+    margin-bottom: 24px;
   }
   .content {
-    margin-left: 20px;
-    width: 85%;
+    margin: 0;
+    width: 83%;
   }
   .newsletter-image img {
-    padding: 20px;
-    width: 95%;
+    margin-left: 20px;
+    width: 93%;
   }
   .newsletter-image .offer {
     width: 38%;
     height: 23%;
     transform: rotate(-19.628deg);
-    top: 62%;
-    left: 60%;
+    top: 67%;
+    left: 58%;
   }
   .newsletter-image .offer > p {
     font-size: 0.8rem;
@@ -599,7 +693,18 @@ span {
   .newsletter-image .offer > h2 {
     font-size: 1rem;
   }
-  /* footer section responsive */
+
+  /* ----------Footer section responsive---------- */
+  .footer-section {
+    width: 100%;
+  }
+  .footer-name img {
+    width: 28.724px;
+    height: 33.516px;
+  }
+  .footer-name {
+    align-items: center;
+  }
   .footer-name h1 {
     font-size: 21.543px;
   }
@@ -608,16 +713,24 @@ span {
   }
   .footer-content p {
     font-size: 14px;
+    margin-bottom: 24px;
   }
   .line {
     margin-left: 20px;
     width: 90%;
+    padding: 0;
+    margin-bottom: 24px;
   }
   .social-logo svg {
     width: 174.322px;
     height: 24px;
   }
+  .social-logo {
+    margin-bottom: 24px;
+  }
   .footer {
     font-size: 14px;
+    margin: 0;
+    padding-bottom: 24px;
   }
 }
