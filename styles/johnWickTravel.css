@@ -5,3 +5,114 @@
   --primary-color: #ff5400;
 }
 
+body {
+  max-width: 1170px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mulish;
+}
+.banner {
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(/Images/banner.png);
+  border-radius: 16px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.banner > h1 {
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0;
+}
+.banner > p {
+  width: 676px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.banner .input-field {
+  display: flex;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 16px;
+  gap: 24px;
+}
+.banner .input-field input {
+  width: 174px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  color: rgba(15, 15, 49, 0.5);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 16px;
+  margin-right: 24px;
+}
+.banner .input-field svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-left: -60px;
+  margin-top: 14px;
+}
+.button {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  width: 174px;
+  height: 52px;
+  border: none;
+  color: #fff;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+}
+.banner .input-field .search-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  padding-left: 30px;
+  margin-top: -2px;
+}
+
+/* Responsive media quires styles */
+
+@media screen and (max-width: 600px) {
+  .banner {
+    background-position: center;
+    margin: 20px;
+  }
+  .banner > h1 {
+    font-size: 22px;
+  }
+  .banner > p {
+    width: 404px;
+  }
+  .banner .input-field {
+    flex-direction: column;
+    width: 60%;
+  }
+  .banner .input-field input {
+    width: 95%;
+  }
+  .button {
+    width: 100%;
+  }
+  .banner .input-field svg {
+    position: relative;
+  }
+}
